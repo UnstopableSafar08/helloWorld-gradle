@@ -24,10 +24,10 @@ repositories {
 dependencies {
     // This dependency is found on compile classpath of this component and consumers.
     implementation 'com.google.guava:guava:26.0-jre'
-
+    classpath(org.jfrog.buildinfo:build-info-extractor-gradle:4.29.0)
     // Use JUnit test framework
     testImplementation 'junit:junit:4.12'
-    classpath "org.jfrog.buildinfo:build-info-extractor-gradle:4.29.0"
+   
 }
 apply plugin: "com.jfrog.artifactory"
 war {
