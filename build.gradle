@@ -10,7 +10,7 @@ plugins {
     // Apply the java plugin to add support for Java
     id 'java'
     id 'war'
-    id "com.jfrog.artifactory" version "5.0.1"
+    id "com.jfrog.artifactory" version "4.29.0"
     // Apply the application plugin to add support for building an application
     id 'application'
 }
