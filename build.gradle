@@ -30,6 +30,6 @@ dependencies {
     // Use JUnit test framework
     testImplementation 'junit:junit:4.12'  
 }
-apply plugin: "com.jfrog.artifactory"
+//apply plugin: "com.jfrog.artifactory"
 // Define the main class for the application
 mainClassName = 'helloWorld.App'
