@@ -21,7 +21,7 @@ repositories {
     jcenter()
 }
 war {
-    archiveName '**/*.war'
+    archiveName 'helloWorld-gradle.war'
 }
 dependencies {
     // This dependency is found on compile classpath of this component and consumers.
