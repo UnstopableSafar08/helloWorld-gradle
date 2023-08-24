@@ -12,7 +12,7 @@ plugins {
     id 'war'
     //id "com.jfrog.artifactory" version "4.33.0"
     // Apply the application plugin to add support for building an application
-    id 'application'
+    //id 'application'
 }
 
 repositories {
@@ -20,12 +20,8 @@ repositories {
     // You can declare any Maven/Ivy/file repository here.
     jcenter()
 }
-// war {
-//     archiveName 'helloWorld-gradle.war'
-// }
-
-bootWar {
-    archiveFileName = 'somename.war'
+war {
+    archiveName 'helloWorld.war'
 }
 
 dependencies {
