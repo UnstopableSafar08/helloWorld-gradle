@@ -20,9 +20,14 @@ repositories {
     // You can declare any Maven/Ivy/file repository here.
     jcenter()
 }
-war {
-    archiveName 'helloWorld-gradle.war'
+// war {
+//     archiveName 'helloWorld-gradle.war'
+// }
+
+bootWar {
+    archiveFileName = 'somename.war'
 }
+
 dependencies {
     // This dependency is found on compile classpath of this component and consumers.
     implementation 'com.google.guava:guava:26.0-jre'
