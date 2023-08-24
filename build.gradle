@@ -12,7 +12,7 @@ plugins {
     id 'war'
     //id "com.jfrog.artifactory" version "4.33.0"
     // Apply the application plugin to add support for building an application
-    //id 'application'
+    id 'application'
 }
 
 repositories {
@@ -20,16 +20,20 @@ repositories {
     // You can declare any Maven/Ivy/file repository here.
     jcenter()
 }
+apply plugin: 'war'
 war {
-    archiveName 'helloWorld.war'
+    archiveName 'hello-gradle.war'
 }
+    
 
 dependencies {
     // This dependency is found on compile classpath of this component and consumers.
     implementation 'com.google.guava:guava:26.0-jre'
     //classpath "org.jfrog.buildinfo:build-info-extractor-gradle:4+"
     // Use JUnit test framework
-    testImplementation 'junit:junit:4.12'  
+    testImplementation 'junit:junit:4.12'
+    providedCompile 'javax.servlet:servlet-api:2.5'
+    providedCompile 'org.apache.tomcat:tomcat-jsp-api:7.0.55'
 }
 //apply plugin: "com.jfrog.artifactory"
 // Define the main class for the application
