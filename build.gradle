@@ -1,6 +1,6 @@
 plugins {
-    id 'java'
-    id 'war'
+    id 'java' 
+    id 'war' //plugins for war file generations
     id 'application'
 }
 
@@ -8,6 +8,8 @@ repositories {
     jcenter()
     mavenCentral()
 }
+
+//java war file generations
 apply plugin: 'war'
 war {
     baseName 'helloWorld'
@@ -23,6 +25,7 @@ war {
 
 dependencies {
     implementation 'com.google.guava:guava:26.0-jre'
+    //compile and testImplementation dependencies
     compile 'javax:javaee-api:7.0'
     testImplementation 'junit:junit:4.12'
     providedCompile 'javax.servlet:servlet-api:2.5'
