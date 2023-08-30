@@ -12,15 +12,7 @@ repositories {
 //java war file generations
 apply plugin: 'war'
 war {
-    baseName 'helloWorld'
-    from('src/java/resources') {
-        include '**/*.properties'
-        into 'WEB-INF/classes/resources'
-    }
-    from('src/conf') {
-        include 'persistence.xml'
-        into 'WEB-INF/classes/META-INF'
-    }
+    archiveName 'hello-gradle.war'
 }
 
 dependencies {
